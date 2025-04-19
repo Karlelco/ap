@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>M-Pesa Gateway Guide</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <h2 class="nav-logo">M-Pesa Gateway</h2>
+            <a href="/docs" class="nav-docs-button">API Docs</a>
+        </div>
+    </nav>
+    
+    <div class="hero">
+        <h1>M-Pesa Gateway API</h1>
+        <p class="subtitle">Integrate M-Pesa payments into your application with just a few simple API calls</p>
+    </div>
+
+    <div class="container">
+        <div class="features">
+            <h2>Available Endpoints</h2>
+            <div class="endpoints-grid">
+                <div class="endpoint-card">
+                    <h3>Generate Token</h3>
+                    <code>/generate-token</code>
+                    <p>Authenticate and get your access token</p>
+                </div>
+                <div class="endpoint-card">
+                    <h3>STK Push</h3>
+                    <code>/stk-push</code>
+                    <p>Initiate payment requests to customer phones</p>
+                </div>
+                <div class="endpoint-card">
+                    <h3>Health Check</h3>
+                    <code>/health</code>
+                    <p>Monitor API status and availability</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
