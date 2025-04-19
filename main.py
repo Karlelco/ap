@@ -6,6 +6,9 @@ import base64
 from typing import Optional
 import os
 
+
+port = int(os.environ.get("PORT", 10000))
+
 app = FastAPI(title="M-Pesa Gateway API", description="Simplified M-Pesa Integration for Websites", version="1.0.0")
 
 BASE_URL = "https://sandbox.safaricom.co.ke"  # Change to production for live
@@ -91,3 +94,7 @@ def docs_guide():
         return HTMLResponse(content=html_content, status_code=200)
     except FileNotFoundError:
         return HTMLResponse(content="<h1>Guide Not Found</h1>", status_code=404)
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 10000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=True)
